@@ -55,6 +55,12 @@
         scene.add(box);   // シーンに追加
 
         update();
+        
+        var torusGeometry = new THREE.TorusGeometry( 3.3, 1.5, 24, 24 ); 
+        var torusMaterial = new THREE. MeshToonMaterial( { color: 0xd66b00 } );
+        var torus = new THREE.Mesh( torusGeometry, torusMaterial );
+        torus.position.set( 0.5, 0, -20);
+        scene.add( torus );
 
         // 毎フレーム時に実行されるループイベントです
         function update() {
