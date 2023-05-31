@@ -41,12 +41,6 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-        // helper
-        const gridHelper = new THREE.GridHelper(2,10); // size, step
-        scene.add(gridHelper);
-        const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
-        scene.add(axisHelper);
-
         // 箱を作成
         var geometry = new THREE.BoxGeometry(1, 1, 1);
         var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
@@ -60,7 +54,7 @@
         var torusGeometry = new THREE.TorusGeometry( 3.3, 1.5, 24, 24 ); 
         var torusMaterial = new THREE. MeshToonMaterial( { color: 0x00ffff , wireframe: true} );
         var torus = new THREE.Mesh( torusGeometry, torusMaterial );
-        torus.position.set( 0.5, 0, 0);
+        torus.position.set( 0, 0, 0);
         scene.add( torus );
 
         // 毎フレーム時に実行されるループイベントです
