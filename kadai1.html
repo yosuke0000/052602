@@ -51,20 +51,20 @@
         update();
         
         //ドーナッツ
-        var torusGeometry = new THREE.TorusGeometry( 3.3, 1.5, 24, 24 ); 
+        var torusGeometry = new THREE.TorusGeometry( 3.3, 1.5, 10, 24 ); 
         var torusMaterial = new THREE. MeshToonMaterial( { color: 0x00ffff , wireframe: true} );
         var torus = new THREE.Mesh( torusGeometry, torusMaterial );
         torus.position.set( 0, 0, 0);
         scene.add( torus );
         
         //球
-        var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 );
+        var sphereGeometry = new THREE.SphereGeometry( 10, 32, 32 );
         var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xffff00} );
         var sphereMaterial1 = new THREE. MeshPhongMaterial( {color: 0xffff00 , wireframe: true} );
         var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
         var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial1 );
-        sphere1.position.set( 1.3, 0, -5 );
-        sphere2.position.set( -1.3, 0, -5 );
+        sphere1.position.set(0, -20, 0 );
+        sphere2.position.set(0, 20,0 );
         scene.add( sphere1 );
         scene.add( sphere2 );
 
