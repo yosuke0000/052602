@@ -6,7 +6,7 @@
   </head>
 <body>
  <h1>6月27日の昼ご飯に自分で作ったトースト</h1>
- ループで三つにした<br>
+ ループで5つにした<br>
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -21,7 +21,7 @@
         document.body.appendChild(renderer.domElement);
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0xffffdd);
+        renderer.setClearColor(00000000);
 
 
         // シーンを作成
@@ -58,7 +58,7 @@
         const material = new THREE.SpriteMaterial({ map: texture,});
 
         // トーストを増やす
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 5; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
           sprite.position.x = 2 * (Math.random() - 0.5);
